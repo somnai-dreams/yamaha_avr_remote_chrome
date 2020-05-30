@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Water Popup</title>
+</head>
+    <style>
+        body{
+            width: auto;
+            padding: 1rem;
+            text-align: center;
+            background: #484453;
+        }
+
+        button{
+            padding: 0.5rem 2rem;
+            display: inline-block;
+            background: #3d3946;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.1s;
+            margin: 0.2rem;
+            min-width: 6rem;
+            border-radius: 0.2rem;
+            font-weight: 600;
+        }
+        .green{
+            background: #88c17e;
+        }
+        .red{
+            background: #cf6464;
+        }
+        button:hover{
+            background: white;
+            color: #484453;
+        }
+        h1{
+            color: white;
+            font-weight: 700;
+        }
+        h2{
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+        }
+        .section{
+            padding: 1rem;
+            border-radius: 0.4rem;
+            background: #545060;
+        }
+    </style>
+
+<body>
+    <h1>REMOTE</h1>
+    <div class="section">
+    <h2>Power</h2>
+    <button class='inputChange green' value='<?xml version="1.0" encoding="utf-8"?><YAMAHA_AV cmd="PUT"><System><Power_Control><Power>On</Power></Power_Control></System></YAMAHA_AV>'>On</button>
+    <button class='inputChange red' value='<?xml version="1.0" encoding="utf-8"?><YAMAHA_AV cmd="PUT"><System><Power_Control><Power>Standby</Power></Power_Control></System></YAMAHA_AV>'>Off</button>
+    </div>
+
+    <br>
+    <br>
+    <div class="section">
+    <h2>Input</h2>
+    <button class='inputChange' value='<?xml version="1.0" encoding="utf-8"?><YAMAHA_AV cmd="PUT"><Main_Zone><Input><Input_Sel>HDMI1</Input_Sel></Input></Main_Zone></YAMAHA_AV>'>PC</button>
+    <button class='inputChange' value='<?xml version="1.0" encoding="utf-8"?><YAMAHA_AV cmd="PUT"><Main_Zone><Input><Input_Sel>AUDIO3</Input_Sel></Input></Main_Zone></YAMAHA_AV>'>TV</button>
+    </div>
+
+</body>
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popup.js"></script>
+</html>
